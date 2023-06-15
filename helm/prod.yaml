@@ -1,5 +1,14 @@
+env: prod
 component: shipping
 params: "CART_ENDPOINT:prod.shipping.cart_endpoint,DB_HOST:prod.rds.endpoint"
 schemaLoadJob:
   create: true
   type: mysql
+
+resources:
+   limits:
+     cpu: 1300m
+     memory: 3048Mi
+   requests:
+     cpu: 1000m
+     memory: 2500Mi
